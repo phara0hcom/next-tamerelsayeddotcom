@@ -6,7 +6,6 @@ import about_2 from '../../assets/images/about_2.jpg';
 import about_2__small from '../../assets/images/about_2-small.jpg';
 import about_3 from '../../assets/images/about_3.jpg';
 import about_3__small from '../../assets/images/about_3-small.jpg';
-import my_CV from '../../assets/cv/Tamer.Elsayed_CV.pdf';
 
 const About = () => {
     return (
@@ -33,7 +32,10 @@ const About = () => {
                         role within Creative Clicks I'm looking for my next
                         challenge.
                     </p>
-                    <a href={my_CV} className="btn-text">
+                    <a
+                        href="./static/cv/Tamer.Elsayed_CV.pdf"
+                        className="btn-text"
+                    >
                         My CV &rarr;
                     </a>
                 </div>
