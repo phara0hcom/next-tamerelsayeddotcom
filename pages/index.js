@@ -10,9 +10,11 @@ import Footer from '../components/Footer/Footer';
 import '../assets/sass/main.scss';
 
 ReactGA.initialize('UA-46341330-2');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default class App extends Component {
+    componentDidMount() {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
     render() {
         return (
             <div>
