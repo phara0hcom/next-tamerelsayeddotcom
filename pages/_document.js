@@ -38,6 +38,10 @@ export default class MyDocument extends Document {
                         type="image/png"
                         href="./static/favicon.png"
                     />
+                    <meta
+                        name="google-site-verification"
+                        content="JWrxL6cU-BnnEofbhayp-Uce71MFqCgk7vItAD4kl84"
+                    />
                 </Head>
                 <body>
                     <Main />
