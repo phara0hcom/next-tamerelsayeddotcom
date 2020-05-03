@@ -1,5 +1,5 @@
 import React from 'react';
-//import logoWhite from "../../images/logo-white.png";
+
 import about_1 from '../../assets/images/about_1.jpg';
 import about_1__small from '../../assets/images/about_1-small.jpg';
 import about_2 from '../../assets/images/about_2.jpg';
