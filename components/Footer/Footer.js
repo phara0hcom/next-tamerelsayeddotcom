@@ -8,18 +8,24 @@ import linkedIn from '../../assets/images/linkedin.svg';
 import gitHub from '../../assets/images/github.svg';
 import instaGram from '../../assets/images/instagram.svg';
 
-const Footer = () => {
+const Footer = (props) => {
+  console.log({ props });
   return (
     <footer className="footer" id="section-contact">
-      <picture className="footer__logo">
-        <source srcSet={`${logoRound_150} 1x, ${logoRound_250} 2x`} media="( max-width: 37.5em )" />
-        <img
-          className="footer__logo-img"
-          srcSet={`${logoFull_x1} 1x, ${logoFull_x2} 2x`}
-          alt="Full logo"
-          src={logoFull_x2}
-        />
-      </picture>
+      <a className="footer__logo" href="./">
+        <picture>
+          <source
+            srcSet={`${logoRound_150} 1x, ${logoRound_250} 2x`}
+            media="( max-width: 37.5em )"
+          />
+          <img
+            className="footer__logo-img"
+            srcSet={`${logoFull_x1} 1x, ${logoFull_x2} 2x`}
+            alt="Full logo"
+            src={logoFull_x2}
+          />
+        </picture>
+      </a>
       <div className="footer__social">
         <ul className="footer__list">
           <li className="footer__item">
@@ -68,19 +74,37 @@ const Footer = () => {
       <div className="footer__navigation">
         <ul className="footer__list">
           <li className="footer__item">
-            <AnchorLink href="#section-about" className="footer__link">
-              About
-            </AnchorLink>
+            {props.notMainPage ? (
+              <a className="footer__link" href="./#section-about">
+                About
+              </a>
+            ) : (
+              <AnchorLink href="#section-about" className="footer__link">
+                About
+              </AnchorLink>
+            )}
           </li>
           <li className="footer__item">
-            <AnchorLink href="#section-skills" className="footer__link">
-              Skills
-            </AnchorLink>
+            {props.notMainPage ? (
+              <a className="footer__link" href="./#section-skills">
+                Skills
+              </a>
+            ) : (
+              <AnchorLink href="#section-skills" className="footer__link">
+                Skills
+              </AnchorLink>
+            )}
           </li>
           <li className="footer__item">
-            <AnchorLink href="#section-portfolio" className="footer__link">
-              Portfolio
-            </AnchorLink>
+            {props.notMainPage ? (
+              <a className="footer__link" href="./#section-portfolio">
+                Portfolio
+              </a>
+            ) : (
+              <AnchorLink href="#section-portfolio" className="footer__link">
+                Portfolio
+              </AnchorLink>
+            )}
           </li>
         </ul>
       </div>

@@ -38,7 +38,11 @@
 }
 
 .section-portfolio {
+  margin-top: -15rem;
+}
+
+.section-portfolio,
+.section-404 {
   background-color: $color-gray-light-1;
   padding: 20rem 0 10rem;
-  margin-top: -15rem;
 }
