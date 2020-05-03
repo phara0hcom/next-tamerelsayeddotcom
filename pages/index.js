@@ -6,8 +6,6 @@ import Skills from '../components/Skills/Skills';
 import Portfolio from '../components/Portfolio/Portfolio';
 import Footer from '../components/Footer/Footer';
 
-import '../assets/sass/main.scss';
-
 export default class App extends Component {
     render() {
         return (
