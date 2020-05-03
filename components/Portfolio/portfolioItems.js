@@ -11,17 +11,25 @@ export const portfolioItems = [
   {
     original: Archer,
     thumbnail: Archer_sml,
+    thumbnailAlt: 'Self portrait in comic style',
+    originalAlt: 'Self portrait in comic style',
   },
   {
     original: abstract,
     thumbnail: abstract_sml,
+    thumbnailAlt: 'abstract Pharaoh art',
+    originalAlt: 'abstract Pharaoh art',
   },
   {
     original: Cat,
     thumbnail: Cat_sml,
+    thumbnailAlt: 'Hipster Cat like animal',
+    originalAlt: 'Hipster Cat like animal',
   },
   {
     original: Light2sound,
     thumbnail: Light2sound_sml,
+    thumbnailAlt: 'Sound waves from a prism',
+    originalAlt: 'Sound waves from a prism',
   },
 ];
