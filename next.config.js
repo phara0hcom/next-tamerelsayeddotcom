@@ -11,6 +11,6 @@ module.exports = nextImages({
   // Have to list all the environment variables used here to make it available
   // to the client side code
   env: {
-    GoogleAnalyticsKey: process.env.GoogleAnalyticsKey,
+    GA_KEY: process.env.GA_KEY,
   },
 });
