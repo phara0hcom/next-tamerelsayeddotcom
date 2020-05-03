@@ -1,7 +1,9 @@
+const withPlugins = require('next-compose-plugins');
+const withPWA = require('next-pwa');
 const nextImages = require('next-images');
 const Dotenv = require('dotenv-webpack');
 
-module.exports = nextImages({
+const nextConfig = {
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Add the new plugin to the existing webpack plugins
     config.plugins.push(new Dotenv({ silent: true }));
@@ -13,4 +15,17 @@ module.exports = nextImages({
   env: {
     GA_KEY: process.env.GA_KEY,
   },
-});
+};
+
+module.exports = withPlugins(
+  [nextImages],
+  [
+    withPWA,
+    {
+      pwa: {
+        dest: 'public',
+      },
+    },
+  ],
+  nextConfig
+);
