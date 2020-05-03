@@ -4,12 +4,8 @@ import logoRound_150 from '../../assets/images/Round_logo_150x150.png';
 import logoRound_250 from '../../assets/images/Round_logo_250x250.png';
 import logoFull_x1 from '../../assets/images/full_logo_x1.png';
 import logoFull_x2 from '../../assets/images/full_logo_x2.png';
-import linkedIn from '../../assets/images/linkedin.svg';
-import gitHub from '../../assets/images/github.svg';
-import instaGram from '../../assets/images/instagram.svg';
 
 const Footer = (props) => {
-  console.log({ props });
   return (
     <footer className="footer" id="section-contact">
       <a className="footer__logo" href="./">

@@ -7,9 +7,15 @@ import Skills from '../components/Skills/Skills';
 import Portfolio from '../components/Portfolio/Portfolio';
 import Footer from '../components/Footer/Footer';
 
+import { initGA, logPageView } from '../utils/googleAnalytics';
+
 const App = () => {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
   }, []);
 
   return (
