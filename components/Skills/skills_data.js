@@ -5,6 +5,10 @@ export const MySkills = [
     name: 'JavaScript',
   },
   {
+    type: 'Programming Language',
+    name: 'TypeScript',
+  },
+  {
     icon: 'icon-nodejs',
     type: 'Runtime environment',
     name: 'Node Js',
