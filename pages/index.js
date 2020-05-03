@@ -7,25 +7,21 @@ import Skills from '../components/Skills/Skills';
 import Portfolio from '../components/Portfolio/Portfolio';
 import Footer from '../components/Footer/Footer';
 
-import '../assets/sass/main.scss';
-
-ReactGA.initialize('UA-46341330-2');
-
 export default class App extends Component {
-    componentDidMount() {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }
-    render() {
-        return (
-            <div>
-                <Header />
-                <main>
-                    <About />
-                    <Skills />
-                    <Portfolio />
-                    <Footer />
-                </main>
-            </div>
-        );
-    }
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+  render() {
+    return (
+      <div>
+        <Header />
+        <main>
+          <About />
+          <Skills />
+          <Portfolio />
+          <Footer />
+        </main>
+      </div>
+    );
+  }
 }
