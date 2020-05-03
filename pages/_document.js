@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <title>Tamer Elsayed - Web-Developer</title>
         <meta
           name="Description"
