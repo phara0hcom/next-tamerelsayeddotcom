@@ -1,11 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import ReactGA from 'react-ga';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+  componentDidMount() {
+    ReactGA.initialize(process.env.GoogleAnalyticsKey);
   }
-
   render() {
     return (
       <Html>
