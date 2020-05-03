@@ -29,6 +29,7 @@ const Footer = (props) => {
               href="https://www.linkedin.com/in/t-elsayed/"
               target="_blank"
               className="footer__link"
+              rel="noopener"
             >
               <svg
                 className="footer__link-icon"
@@ -40,7 +41,12 @@ const Footer = (props) => {
             </a>
           </li>
           <li className="footer__item">
-            <a href="https://github.com/phara0hcom/" target="_blank" className="footer__link">
+            <a
+              href="https://github.com/phara0hcom/"
+              target="_blank"
+              rel="noopener"
+              className="footer__link"
+            >
               <svg
                 className="footer__link-icon"
                 viewBox="0 0 24 24"
@@ -55,6 +61,7 @@ const Footer = (props) => {
               href="https://www.instagram.com/phara0h_com/"
               target="_blank"
               className="footer__link"
+              rel="noopener"
             >
               <svg
                 className="footer__link-icon"
