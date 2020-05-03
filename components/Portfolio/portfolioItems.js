@@ -8,20 +8,20 @@ import Light2sound from '../../assets/images/Light2sound_WP_1900x1200.png';
 import Light2sound_sml from '../../assets/images/Light2sound_WP_150x100.png';
 
 export const portfolioItems = [
-    {
-        original: Archer,
-        thumbnail: Archer_sml
-    },
-    {
-        original: abstract,
-        thumbnail: abstract_sml
-    },
-    {
-        original: Cat,
-        thumbnail: Cat_sml
-    },
-    {
-        original: Light2sound,
-        thumbnail: Light2sound_sml
-    }
+  {
+    original: Archer,
+    thumbnail: Archer_sml,
+  },
+  {
+    original: abstract,
+    thumbnail: abstract_sml,
+  },
+  {
+    original: Cat,
+    thumbnail: Cat_sml,
+  },
+  {
+    original: Light2sound,
+    thumbnail: Light2sound_sml,
+  },
 ];

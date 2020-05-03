@@ -4,12 +4,17 @@ import { MySkills } from './skills_data';
 import svgSprite from '../../assets/images/sprite.svg';
 import dockerLogo from '../../assets/images/Docker-Logo-Black.png';
 import circleLogo from '../../assets/images/circle-logo-stacked-black.png';
+import typeScriptLogo from '../../assets/images/typescriptlang-icon.svg';
 
 const createSkillList = (data, i) => {
   let imageSrc;
   switch (data.name) {
     case 'Circle-CI':
       imageSrc = circleLogo;
+      break;
+
+    case 'TypeScript':
+      imageSrc = typeScriptLogo;
       break;
 
     default:
