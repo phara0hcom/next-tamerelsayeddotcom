@@ -19,7 +19,7 @@ const Header = () => {
         <h1 className="heading-primary">
           <span className="heading-primary--main">Tamer</span>
           <span className="heading-primary--main">Elsayed</span>
-          <span className="heading-primary--sub">Web-Designer</span>
+          <span className="heading-primary--sub">Web-Developer</span>
         </h1>
 
         <AnchorLink href="#section-about" className="btn btn--white btn--animated">
