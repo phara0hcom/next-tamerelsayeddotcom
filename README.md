@@ -11,3 +11,11 @@ Next JS version of my webpage made it for SOE reasons and so I can make subfolde
 `npm run build`
 
 `npm run dev` or `npm start`
+
+## TO DO
+
+- [ ] Add Service Worker
+- [ ] Defer loading images under the fold
+- [ ] Make CV in HTML
+- [ ] Convert to TypeScript
+- [ ] Add testing
