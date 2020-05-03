@@ -30,6 +30,7 @@ const Footer = (props) => {
               target="_blank"
               className="footer__link"
               rel="noopener"
+              aria-label="Linked-In"
             >
               <svg
                 className="footer__link-icon"
@@ -46,6 +47,7 @@ const Footer = (props) => {
               target="_blank"
               rel="noopener"
               className="footer__link"
+              aria-label="Git-Hub"
             >
               <svg
                 className="footer__link-icon"
@@ -62,6 +64,7 @@ const Footer = (props) => {
               target="_blank"
               className="footer__link"
               rel="noopener"
+              aria-label="Instagram"
             >
               <svg
                 className="footer__link-icon"
