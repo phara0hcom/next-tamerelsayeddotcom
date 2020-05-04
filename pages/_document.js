@@ -25,7 +25,6 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/apple-icon.png"></link>
           <meta name="theme-color" content="#317EFB" />
           <link
-            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
             rel="stylesheet"
           />
