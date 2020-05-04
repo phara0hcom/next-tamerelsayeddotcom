@@ -1,5 +1,3 @@
-const withPlugins = require('next-compose-plugins');
-const withPWA = require('next-pwa');
 const nextImages = require('next-images');
 const Dotenv = require('dotenv-webpack');
 const withOffline = require('next-offline');
@@ -43,16 +41,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins(
-  [nextImages],
-  [
-    withPWA,
-    {
-      pwa: {
-        dest: 'public',
-      },
-    },
-  ],
-  [withOffline],
-  nextConfig
-);
+module.exports = nextImages(withOffline(nextConfig));
