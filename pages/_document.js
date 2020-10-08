@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import ReactGA from 'react-ga';
 
 class MyDocument extends Document {
   render() {
