@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
@@ -18,23 +18,7 @@ const Footer = dynamic(() => import('../components/Footer/Footer'), {
   loading: () => <div>Loading...</div>,
 });
 
-import { initGA, logPageView } from '../utils/googleAnalytics';
-
-declare global {
-  interface Window {
-    GA_INITIALIZED?: boolean;
-  }
-}
-
 const App: React.FC = () => {
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
-    logPageView();
-  }, []);
-
   return (
     <>
       <Head>

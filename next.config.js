@@ -32,7 +32,7 @@ const nextConfig = {
   },
   // Environment variables are automatically loaded from .env.local
   env: {
-    GA_KEY: process.env.GA_KEY,
+    NEXT_PUBLIC_GA_KEY: process.env.GA_KEY,
   },
   // SCSS is now built-in, no configuration needed
 
