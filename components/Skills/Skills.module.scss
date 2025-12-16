@@ -1,0 +1,78 @@
+@use '../../assets/sass/abstracts' as *;
+
+.sectionSkills {
+  margin-top: -15rem;
+  padding: 10rem;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../../assets/images/caspar-rubin-220711-unsplash-small.jpg');
+  background-size: cover;
+  background-position: center;
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    clip-path: polygon(0 15rem, 100% 0, 100% calc(100% - 15rem), 0 100%);
+    padding: 20rem 10rem;
+
+    @include respond(tab-port) {
+      clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
+      padding: 15rem 0;
+    }
+
+    @include respond(phone) {
+      clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0 100%);
+      padding: 10rem 0;
+    }
+  }
+}
+
+.skills {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  color: $color-primary-dark;
+  grid-gap: 2rem 2rem;
+}
+
+.skillsBox {
+  display: grid;
+  grid-column-gap: 1.5rem;
+  align-content: center;
+  grid-template-columns: min-content 1fr;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: rgba($color-gray-light-1, 0.7);
+  border-radius: 5px;
+}
+
+.skillsIcon {
+  width: 6rem;
+  height: 6rem;
+  fill: currentColor;
+  display: block;
+}
+
+.skillsIconImage {
+  display: block;
+  width: 6rem;
+  height: auto;
+}
+
+.skillsType {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.skillsName {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.skillsDetails {
+  display: grid;
+  align-content: center;
+}

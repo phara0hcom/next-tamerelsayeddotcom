@@ -1,26 +1,10 @@
-const nextImages = require('next-images');
-const Dotenv = require('dotenv-webpack');
-const withOffline = require('next-offline');
-
-const nextConfig = {
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add the new plugin to the existing webpack plugins
-    config.plugins.push(new Dotenv({ silent: true }));
-
-    return config;
-  },
-  // Have to list all the environment variables used here to make it available
-  // to the client side code
-  env: {
-    GA_KEY: process.env.GA_KEY,
-  },
-  target: 'serverless',
-  transformManifest: (manifest) => ['/'].concat(manifest), // add the homepage to the cache
-  // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
-  // turn on the SW in dev mode so that we can actually test it
-  generateInDevMode: true,
-  workboxOpts: {
-    swDest: 'static/service-worker.js',
+/** @type {import('next').NextConfig} */
+const withPWA = require('@ducanh2912/next-pwa').default({
+  dest: 'public',
+  disable: process.env.NODE_ENV === 'development',
+  register: true,
+  skipWaiting: true,
+  workboxOptions: {
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
@@ -39,6 +23,27 @@ const nextConfig = {
       },
     ],
   },
+});
+
+const nextConfig = {
+  // Built-in image optimization (no next-images needed)
+  images: {
+    formats: ['image/webp', 'image/avif'],
+  },
+  // Environment variables are automatically loaded from .env.local
+  env: {
+    GA_KEY: process.env.GA_KEY,
+  },
+  // SCSS is now built-in, no configuration needed
+
+  // Enable React strict mode for better development experience
+  reactStrictMode: true,
+
+  // Disable x-powered-by header for security
+  poweredByHeader: false,
+
+  // Turbopack configuration (Next.js 16+ uses Turbopack by default)
+  turbopack: {},
 };
 
-module.exports = nextImages(withOffline(nextConfig));
+module.exports = withPWA(nextConfig);

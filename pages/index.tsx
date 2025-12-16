@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import Head from 'next/head';
 
 import Header from '../components/Header/Header';
 import About from '../components/About/About';
@@ -9,7 +9,13 @@ import Footer from '../components/Footer/Footer';
 
 import { initGA, logPageView } from '../utils/googleAnalytics';
 
-const App = () => {
+declare global {
+  interface Window {
+    GA_INITIALIZED?: boolean;
+  }
+}
+
+const App: React.FC = () => {
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
@@ -19,15 +25,20 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <main>
-        <About />
-        <Skills />
-        <Portfolio />
-        <Footer />
-      </main>
-    </div>
+    <>
+      <Head>
+        <title>Tamer Elsayed - Web-Developer</title>
+      </Head>
+      <div>
+        <Header />
+        <main>
+          <About />
+          <Skills />
+          <Portfolio />
+          <Footer />
+        </main>
+      </div>
+    </>
   );
 };
 

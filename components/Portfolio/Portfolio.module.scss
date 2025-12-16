@@ -1,0 +1,6 @@
+@use "../../assets/sass/abstracts" as *;
+
+:global(.image-gallery) {
+  max-width: 800px;
+  margin: 0 auto;
+}

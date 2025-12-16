@@ -1,9 +1,13 @@
 import React from 'react';
+import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 
-const Custom404 = () => {
+const Custom404: React.FC = () => {
   return (
     <>
+      <Head>
+        <title>404 - Page Not Found | Tamer Elsayed</title>
+      </Head>
       <section className="section-404">
         <div className="u-center-text u-margin-bottom-big">
           <h1 className="heading-primary--big">404</h1>

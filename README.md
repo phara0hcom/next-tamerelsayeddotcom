@@ -4,7 +4,7 @@
 
 Next JS version of my webpage made it for SOE reasons and so I can make subfolders with different personal projects in on project and put it in a serverless enviorment.
 
-#### Step to get it wroking
+#### Step to get it working
 
 `npm install`
 
@@ -17,5 +17,5 @@ Next JS version of my webpage made it for SOE reasons and so I can make subfolde
 - [x] Add Service Worker
 - [ ] Defer loading images under the fold
 - [ ] Make CV in HTML
-- [ ] Convert to TypeScript
+- [x] Convert to TypeScript
 - [ ] Add testing

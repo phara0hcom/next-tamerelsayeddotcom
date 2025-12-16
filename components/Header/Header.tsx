@@ -1,21 +1,20 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import logoRound_150 from '../../assets/images/Round_logo_150x150.png';
-import logoRound_250 from '../../assets/images/Round_logo_250x250.png';
+import styles from './Header.module.scss';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <header className="header">
-      <div className="header__logo-box">
+    <header className={styles.header}>
+      <div className={styles.logoBox}>
         <img
-          src={logoRound_250}
+          src="/images/Round_logo_250x250.png"
           alt="Logo"
-          srcSet={`${logoRound_150} 150w,${logoRound_250} 250w`}
+          srcSet="/images/Round_logo_150x150.png 150w, /images/Round_logo_250x250.png 250w"
           sizes="(max-width: 75em) 2vw, (max-width: 37.5em) 2vw, 45px"
-          className="header__logo"
+          className={styles.logo}
         />
       </div>
-      <div className="header__text-box">
+      <div className={styles.textBox}>
         <h1 className="heading-primary">
           <span className="heading-primary--main">Tamer</span>
           <span className="heading-primary--main">Elsayed</span>
