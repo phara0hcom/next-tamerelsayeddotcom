@@ -7,33 +7,20 @@ interface SkillBoxProps {
 }
 
 const SkillBox: React.FC<SkillBoxProps> = ({ skill }) => {
-  let imageSrc: string;
-  switch (skill.name) {
-    case 'Circle-CI':
-      imageSrc = '/images/circle-logo-stacked-black.png';
-      break;
-
-    case 'TypeScript':
-      imageSrc = '/images/typescriptlang-icon.svg';
-      break;
-
-    default:
-      imageSrc = '/images/Docker-Logo-Black.png';
-      break;
-  }
+  const { imgSrc, icon, name, type } = skill;
 
   return (
     <div className={styles.skillsBox}>
-      {skill.icon ? (
+      {icon ? (
         <svg className={styles.skillsIcon}>
-          <use xlinkHref={`/images/sprite.svg#${skill.icon}`} />
+          <use xlinkHref={`/images/sprite.svg#${icon}`} />
         </svg>
       ) : (
-        <img className={styles.skillsIconImage} src={imageSrc} alt={skill.name} />
+        <img className={styles.skillsIconImage} src={imgSrc} alt={name} loading="lazy" />
       )}
       <div className={styles.skillsDetails}>
-        <div className={styles.skillsType}>{skill.type}</div>
-        <div className={styles.skillsName}>{skill.name}</div>
+        <div className={styles.skillsType}>{type}</div>
+        <div className={styles.skillsName}>{name}</div>
       </div>
     </div>
   );

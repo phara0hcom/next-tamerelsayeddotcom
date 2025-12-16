@@ -36,6 +36,7 @@ const About: React.FC = () => {
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 3"
               className={`${styles.compositionPhoto} ${styles.compositionPhotoP1}`}
+              loading="lazy"
             />
 
             <img
@@ -44,6 +45,7 @@ const About: React.FC = () => {
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 2"
               className={`${styles.compositionPhoto} ${styles.compositionPhotoP2}`}
+              loading="lazy"
             />
 
             <img
@@ -52,6 +54,7 @@ const About: React.FC = () => {
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 1"
               className={`${styles.compositionPhoto} ${styles.compositionPhotoP3}`}
+              loading="lazy"
             />
           </div>
         </div>

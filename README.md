@@ -15,7 +15,7 @@ Next JS version of my webpage made it for SOE reasons and so I can make subfolde
 ## TO DO
 
 - [x] Add Service Worker
-- [ ] Defer loading images under the fold
+- [x] Defer loading images under the fold
 - [ ] Make CV in HTML
 - [x] Convert to TypeScript
 - [ ] Add testing

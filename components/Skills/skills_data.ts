@@ -1,5 +1,6 @@
 export interface Skill {
   icon?: string;
+  imgSrc?: string;
   type: string;
   name: string;
 }
@@ -13,6 +14,7 @@ export const MySkills: Skill[] = [
   {
     type: 'Programming Language',
     name: 'TypeScript',
+    imgSrc: '/images/typescriptlang-icon.svg',
   },
   {
     icon: 'icon-nodejs',
@@ -52,10 +54,12 @@ export const MySkills: Skill[] = [
   {
     type: 'PaaS',
     name: 'Docker',
+    imgSrc: '/images/Docker-Logo-Black.png',
   },
   {
     type: 'Continuous integration',
     name: 'Circle-CI',
+    imgSrc: '/images/circle-logo-stacked-black.png',
   },
   {
     icon: 'icon-HTML5',

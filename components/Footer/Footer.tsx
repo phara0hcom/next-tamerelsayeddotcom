@@ -20,6 +20,7 @@ const Footer: React.FC<FooterProps> = ({ notMainPage }) => {
             srcSet="/images/full_logo_x1.png 1x, /images/full_logo_x2.png 2x"
             alt="Full logo"
             src="/images/full_logo_x2.png"
+            loading="lazy"
           />
         </picture>
       </a>

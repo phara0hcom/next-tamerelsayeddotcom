@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import Footer from '../components/Footer/Footer';
+import dynamic from 'next/dynamic';
+
+const Footer = dynamic(() => import('../components/Footer/Footer'), {
+  loading: () => <div>Loading...</div>,
+});
 
 const Custom404: React.FC = () => {
   return (

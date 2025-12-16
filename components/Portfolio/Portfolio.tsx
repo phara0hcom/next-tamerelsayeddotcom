@@ -5,7 +5,7 @@ import { portfolioItems } from './portfolioItems';
 const Portfolio: React.FC = () => {
   return (
     <section className="section-portfolio" id="section-portfolio">
-      <ImageGallery items={portfolioItems} />
+      <ImageGallery items={portfolioItems} lazyLoad={true} />
     </section>
   );
 };
