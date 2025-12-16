@@ -2,7 +2,7 @@ import ReactGA from 'react-ga4';
 
 export const initGA = (): void => {
   if (process.env.GA_KEY) {
-    ReactGA.initialize(process.env.GA_KEY);
+    ReactGA.initialize([{ trackingId: process.env.GA_KEY }]);
   }
 };
 
