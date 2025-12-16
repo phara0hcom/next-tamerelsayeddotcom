@@ -24,6 +24,22 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/apple-icon.png" />
           <meta name="theme-color" content="#317EFB" />
           <link rel="icon" href="/favicon.png" />
+
+          {/* Preload critical images for better LCP and FCP */}
+          <link
+            rel="preload"
+            as="image"
+            href="/images/hero-small.jpg"
+            media="(max-width: 37.5em) or (max-resolution: 191dpi)"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/images/hero.jpg"
+            media="(min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em)"
+          />
+          <link rel="preload" as="image" href="/images/Round_logo_150x150.png" />
+          <link rel="preload" as="image" href="/images/Round_logo_250x250.png" />
         </Head>
         <body>
           <Main />
