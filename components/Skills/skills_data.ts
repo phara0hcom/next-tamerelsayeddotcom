@@ -1,4 +1,10 @@
-export const MySkills = [
+export interface Skill {
+  icon?: string;
+  type: string;
+  name: string;
+}
+
+export const MySkills: Skill[] = [
   {
     icon: 'icon-js',
     type: 'Programming Language',

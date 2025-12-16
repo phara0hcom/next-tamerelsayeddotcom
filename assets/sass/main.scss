@@ -1,22 +1,17 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+// Forward abstracts index so variables/mixins are available globally
+@forward "abstracts";
 
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
+// Use base styles (they generate CSS)
+@use "base/base";
+@use "base/animations";
+@use "base/typography";
+@use "base/utilities";
 
-@import "components/button";
-@import "components/composition";
-@import "components/skills-box";
-@import "components/portfolio";
+// Use component styles
+@use "components/button";
 
-@import "../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+// Use layout styles
+@use "layout/grid";
 
-@import "layout/footer";
-@import "layout/header";
-@import "layout/grid";
-@import "layout/navigation";
-
-@import "pages/home";
+// Use page styles
+@use "pages/home";

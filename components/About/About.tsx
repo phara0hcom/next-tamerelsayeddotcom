@@ -1,13 +1,7 @@
 import React from 'react';
+import styles from './About.module.scss';
 
-import about_1 from '../../assets/images/about_1.jpg';
-import about_1__small from '../../assets/images/about_1-small.jpg';
-import about_2 from '../../assets/images/about_2.jpg';
-import about_2__small from '../../assets/images/about_2-small.jpg';
-import about_3 from '../../assets/images/about_3.jpg';
-import about_3__small from '../../assets/images/about_3-small.jpg';
-
-const About = () => {
+const About: React.FC = () => {
   return (
     <section className="section-about" id="section-about">
       <div className="u-center-text u-margin-bottom-big">
@@ -35,29 +29,29 @@ const About = () => {
           </a>
         </div>
         <div className="col-1-of-2">
-          <div className="composition">
+          <div className={styles.composition}>
             <img
-              srcSet={`${about_3__small} 300w,${about_3} 1000w`}
-              src={about_3}
+              srcSet="/images/about_3-small.jpg 300w, /images/about_3.jpg 1000w"
+              src="/images/about_3.jpg"
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 3"
-              className="composition__photo composition__photo--p1"
+              className={`${styles.compositionPhoto} ${styles.compositionPhotoP1}`}
             />
 
             <img
-              srcSet={`${about_2__small} 300w,${about_2} 1000w`}
-              src={about_2}
+              srcSet="/images/about_2-small.jpg 300w, /images/about_2.jpg 1000w"
+              src="/images/about_2.jpg"
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 2"
-              className="composition__photo composition__photo--p2"
+              className={`${styles.compositionPhoto} ${styles.compositionPhotoP2}`}
             />
 
             <img
-              srcSet={`${about_1__small} 300w,${about_1} 1000w`}
-              src={about_1}
+              srcSet="/images/about_1-small.jpg 300w, /images/about_1.jpg 1000w"
+              src="/images/about_1.jpg"
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 1"
-              className="composition__photo composition__photo--p3"
+              className={`${styles.compositionPhoto} ${styles.compositionPhotoP3}`}
             />
           </div>
         </div>

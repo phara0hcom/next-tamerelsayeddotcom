@@ -1,39 +1,40 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import logoRound_150 from '../../assets/images/Round_logo_150x150.png';
-import logoRound_250 from '../../assets/images/Round_logo_250x250.png';
-import logoFull_x1 from '../../assets/images/full_logo_x1.png';
-import logoFull_x2 from '../../assets/images/full_logo_x2.png';
+import styles from './Footer.module.scss';
 
-const Footer = (props) => {
+interface FooterProps {
+  notMainPage?: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({ notMainPage }) => {
   return (
-    <footer className="footer" id="section-contact">
-      <a className="footer__logo" href="./">
+    <footer className={styles.footer} id="section-contact">
+      <a className={styles.footerLogo} href="./">
         <picture>
           <source
-            srcSet={`${logoRound_150} 1x, ${logoRound_250} 2x`}
+            srcSet="/images/Round_logo_150x150.png 1x, /images/Round_logo_250x250.png 2x"
             media="( max-width: 37.5em )"
           />
           <img
-            className="footer__logo-img"
-            srcSet={`${logoFull_x1} 1x, ${logoFull_x2} 2x`}
+            className={styles.footerLogoImg}
+            srcSet="/images/full_logo_x1.png 1x, /images/full_logo_x2.png 2x"
             alt="Full logo"
-            src={logoFull_x2}
+            src="/images/full_logo_x2.png"
           />
         </picture>
       </a>
-      <div className="footer__social">
-        <ul className="footer__list">
-          <li className="footer__item">
+      <div className={styles.footerSocial}>
+        <ul className={styles.footerList}>
+          <li className={styles.footerItem}>
             <a
               href="https://www.linkedin.com/in/t-elsayed/"
               target="_blank"
-              className="footer__link"
+              className={styles.footerLink}
               rel="noopener"
               aria-label="Linked-In"
             >
               <svg
-                className="footer__link-icon"
+                className={styles.footerLinkIcon}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -41,16 +42,16 @@ const Footer = (props) => {
               </svg>
             </a>
           </li>
-          <li className="footer__item">
+          <li className={styles.footerItem}>
             <a
               href="https://github.com/phara0hcom/"
               target="_blank"
               rel="noopener"
-              className="footer__link"
+              className={styles.footerLink}
               aria-label="Git-Hub"
             >
               <svg
-                className="footer__link-icon"
+                className={styles.footerLinkIcon}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -58,16 +59,16 @@ const Footer = (props) => {
               </svg>
             </a>
           </li>
-          <li className="footer__item">
+          <li className={styles.footerItem}>
             <a
               href="https://www.instagram.com/phara0h_com/"
               target="_blank"
-              className="footer__link"
+              className={styles.footerLink}
               rel="noopener"
               aria-label="Instagram"
             >
               <svg
-                className="footer__link-icon"
+                className={styles.footerLinkIcon}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -77,37 +78,37 @@ const Footer = (props) => {
           </li>
         </ul>
       </div>
-      <div className="footer__navigation">
-        <ul className="footer__list">
-          <li className="footer__item">
-            {props.notMainPage ? (
-              <a className="footer__link" href="./#section-about">
+      <div className={styles.footerNavigation}>
+        <ul className={styles.footerList}>
+          <li className={styles.footerItem}>
+            {notMainPage ? (
+              <a className={styles.footerLink} href="./#section-about">
                 About
               </a>
             ) : (
-              <AnchorLink href="#section-about" className="footer__link">
+              <AnchorLink href="#section-about" className={styles.footerLink}>
                 About
               </AnchorLink>
             )}
           </li>
-          <li className="footer__item">
-            {props.notMainPage ? (
-              <a className="footer__link" href="./#section-skills">
+          <li className={styles.footerItem}>
+            {notMainPage ? (
+              <a className={styles.footerLink} href="./#section-skills">
                 Skills
               </a>
             ) : (
-              <AnchorLink href="#section-skills" className="footer__link">
+              <AnchorLink href="#section-skills" className={styles.footerLink}>
                 Skills
               </AnchorLink>
             )}
           </li>
-          <li className="footer__item">
-            {props.notMainPage ? (
-              <a className="footer__link" href="./#section-portfolio">
+          <li className={styles.footerItem}>
+            {notMainPage ? (
+              <a className={styles.footerLink} href="./#section-portfolio">
                 Portfolio
               </a>
             ) : (
-              <AnchorLink href="#section-portfolio" className="footer__link">
+              <AnchorLink href="#section-portfolio" className={styles.footerLink}>
                 Portfolio
               </AnchorLink>
             )}
