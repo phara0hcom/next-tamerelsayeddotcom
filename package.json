@@ -16,7 +16,7 @@
     "@c15t/nextjs": "^1.8.2",
     "@c15t/scripts": "^1.0.1",
     "@ducanh2912/next-pwa": "^10.2.8",
-    "next": "^16.1.5",
+    "next": "^16.1.7",
     "react": "^19.2.3",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^19.2.3",
